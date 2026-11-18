@@ -1,0 +1,876 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0d090a">
+    <meta name="description" content="Dena Siti Dinafilah — Data Analyst & R&D Specialist in Bogor, Indonesia.">
+    <title>Dena Siti Dinafilah — Data, made decisive.</title>
+    
+    <!-- Google Fonts & Tailwind CSS CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&family=Alex+Brush&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#0d090a',
+                        burgundybg: '#180b0e',
+                        burgundycard: '#221014',
+                        burgundyhover: '#3a181e',
+                        lightgray: '#e2d5cf',
+                        mutegray: '#d2c3bd',
+                        subtleline: 'rgba(255, 255, 255, 0.12)',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"DM Mono"', 'monospace'],
+                        script: ['"Alex Brush"', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0d090a; color: #e4e4e7; font-family: 'Plus Jakarta Sans', sans-serif; }
+        .diamond-mark {
+            width: 32px;
+            height: 32px;
+            transform: rotate(45deg);
+            border: 1px solid rgba(228, 228, 231, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .diamond-text {
+            transform: rotate(-45deg);
+            font-family: 'DM Mono', monospace;
+            font-size: 11px;
+            color: #e4e4e7;
+        }
+        /* Grid Border Solid Nyambung */
+        .solid-grid {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-burgundyhover selection:text-white">
+
+<!-- MAIN CONTAINER -->
+<main class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-10" id="top">
+
+    <!-- STICKY NAVBAR -->
+    <header class="sticky top-0 z-50 bg-[#0d090a]/95 backdrop-blur-md pb-4 pt-2 mb-8 border-b border-subtleline flex justify-between items-center">
+        <!-- Logo Diamond DS & Nama -->
+        <a href="#top" class="flex items-center gap-3 group">
+            <div class="diamond-mark group-hover:border-lightgray transition">
+                <span class="diamond-text">DS</span>
+            </div>
+            <span class="font-serif text-base sm:text-lg font-medium tracking-tight text-lightgray">Dena Siti Dinafilah</span>
+        </a>
+        
+        <!-- Menu Navigasi & Tombol Let's Talk -->
+        <nav class="hidden md:flex items-center gap-6 font-mono text-xs uppercase tracking-widest text-mutegray">
+            <a href="#about" class="hover:text-lightgray transition">About</a>
+            <a href="#experience" class="hover:text-lightgray transition">Experience</a>
+            <a href="#expertise" class="hover:text-lightgray transition">Expertise</a>
+            <a href="#projects" class="hover:text-lightgray transition">Projects</a>
+            <a href="#certificates" class="hover:text-lightgray transition">Certificates</a>
+            <a href="#contact" class="px-4 py-2 bg-burgundyhover hover:bg-[#52222a] text-lightgray tracking-widest uppercase transition border border-subtleline">
+                LET’S TALK ↗
+            </a>
+        </nav>
+    </header>
+
+    <!-- 1. HERO SECTION -->
+    <section class="relative pt-4 pb-0 border-b border-subtleline overflow-hidden">
+        <div class="text-center relative z-10 mb-1 pointer-events-auto">
+            <span class="font-script text-5xl sm:text-7xl block tracking-wider" style="color: #fedfd2">Dena Siti Dinafilah</span>
+        </div>
+
+        <div class="text-center absolute inset-x-0 top-16 sm:top-20 z-0 flex justify-center pointer-events-none select-none px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <h1 class="font-serif text-[12.8vw] lg:text-[11.8rem] leading-none font-bold tracking-tighter uppercase opacity-90 w-full text-justify flex justify-between" style="color: #ffcbb4">
+                PORT<span class="italic font-normal">FOLIO</span>
+            </h1>
+        </div>
+
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 lg:pt-40">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+                <!-- Kolom Kiri -->
+                <div class="md:col-span-4 pb-6 flex flex-col justify-between h-full pointer-events-auto">
+                    <div class="pt-14 sm:pt-20">
+                        <p class="font-serif text-base sm:text-lg font-normal text-lightgray leading-snug">
+                            EXPLORING PATTERNS THROUGH THE LENS OF SCIENCE & DATA.
+                        </p>
+                    </div>
+                    <div class="mt-6">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-burgundycard border border-subtleline text-xs font-mono tracking-wider text-lightgray">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                            <span>AVAILABLE FOR PROJECTS ✦</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kolom Tengah -->
+                <div class="md:col-span-4 flex justify-center pointer-events-auto -mt-20 sm:-mt-28 lg:-mt-36 flex-col items-center justify-end">
+                    <div class="w-80 sm:w-[32rem] lg:w-[42rem] transition duration-500 hover:scale-105">
+                        <img src="image\fotome2.png" alt="Dena Siti Dinafilah" class="w-full h-auto object-contain filter grayscale contrast-125 hover:grayscale-0 drop-shadow-2xl mx-auto block align-bottom">
+                    </div>
+                </div>
+
+                <!-- Kolom Kanan -->
+                <div class="md:col-span-4 text-right pb-6 flex flex-col justify-between h-full pointer-events-auto">
+                    <div class="pt-14 sm:pt-20">
+                        <p class="text-xs sm:text-sm text-lightgray font-light leading-relaxed max-w-[270px] ml-auto">
+                            Physics graduate specializing in R&D and data analysis. I enjoy exploring patterns, building systems, and finding order in complexity.
+                        </p>
+                    </div>
+                    <div class="mt-6 font-mono text-xs text-mutegray uppercase tracking-widest leading-relaxed">
+                        BASED IN BOGOR, INDONESIA<br>
+                        AVAILABLE JABODETABEK
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. TABLE OF CONTENTS / INDEX (SIMETRIS 6 KOTAK) -->
+    <section class="my-16 border border-subtleline bg-burgundybg">
+        <div class="p-6 border-b border-subtleline flex justify-between items-center">
+            <p class="font-mono text-xs uppercase tracking-widest text-lightgray">00 / INDEX</p>
+            <h2 class="font-serif text-2xl font-bold text-lightgray">THE SHORT ROUTE ✦</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 font-mono text-xs text-mutegray">
+            <a href="#about" class="p-5 border-r border-b border-subtleline hover:bg-burgundyhover hover:text-lightgray transition flex items-center gap-3">
+                <span class="text-mutegray font-bold">01</span> ABOUT ME
+            </a>
+            <a href="#experience" class="p-5 border-r border-b border-subtleline hover:bg-burgundyhover hover:text-lightgray transition flex items-center gap-3">
+                <span class="text-mutegray font-bold">02</span> EXPERIENCE
+            </a>
+            <a href="#expertise" class="p-5 border-b md:border-r border-subtleline hover:bg-burgundyhover hover:text-lightgray transition flex items-center gap-3">
+                <span class="text-mutegray font-bold">03</span> EXPERTISE & SKILLS
+            </a>
+            <a href="#projects" class="p-5 border-r border-b md:border-b-0 border-subtleline hover:bg-burgundyhover hover:text-lightgray transition flex items-center gap-3">
+                <span class="text-mutegray font-bold">04</span> FEATURED PROJECTS
+            </a>
+            <a href="#certificates" class="p-5 border-r border-subtleline hover:bg-burgundyhover hover:text-lightgray transition flex items-center gap-3">
+                <span class="text-mutegray font-bold">05</span> LICENSES & CERTIFICATES
+            </a>
+            <a href="#contact" class="p-5 hover:bg-burgundyhover hover:text-lightgray transition flex items-center gap-3">
+                <span class="text-mutegray font-bold">06</span> CONTACT ME
+            </a>
+        </div>
+    </section>
+
+  
+    <!-- 3. ABOUT SECTION -->
+    <section id="about" class="my-20 border-b border-subtleline pb-16 scroll-mt-28">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+
+            <!-- LEFT: Headline, Image & Quote -->
+            <div class="lg:col-span-5 flex flex-col h-full">
+
+                <p class="font-mono text-xs uppercase tracking-widest text-mutegray mb-2">
+                    01 / About Me
+                </p>
+
+               <h2 class="font-serif text-xl sm:text-2xl font-bold text-lightgray leading-snug">
+                    Curious about how science, technology, and data come together to solve real-world problems.
+               </h2>
+
+                <!-- About Image -->
+                <div class="relative min-h-[110px] sm:min-h-[130px] lg:min-h-[150px] -mt-2 -mb-2 flex items-center justify-center overflow-visible">
+
+                    <div class="w-28 sm:w-32 md:w-36 lg:w-44 transition-transform duration-500 hover:scale-110">
+                        <img
+                            src="icons/butterfly.png"
+                            alt="Butterfly illustration"
+                            class="w-full h-auto object-contain drop-shadow-2xl mx-auto block"
+                        >
+                    </div>
+
+                </div>
+
+                <!-- Feynman Quote -->
+                <div class="p-4 bg-burgundycard border-l-2 border-lightgray italic text-mutegray text-sm leading-relaxed">
+                    “I was born not knowing and have had only a little time to change that here and there.”
+
+                    <span class="block text-xs font-mono non-italic text-lightgray mt-2">
+                        — Richard Feynman
+                    </span>
+                </div>
+
+            </div>
+
+            <!-- RIGHT: Introduction -->
+            <div class="lg:col-span-7 space-y-6 text-base text-lightgray font-light leading-relaxed">
+
+                <p class="font-normal lg:mt-8">
+                    Hi, I'm Dena — a Physics graduate from Universitas Pendidikan Indonesia, based in Bogor, Indonesia.
+                </p>
+
+                <p>
+                    I enjoy exploring how things work, from materials and electronic systems to data. My journey has taken me through computational research, laboratory work, robotics, and data analytics, each offering a different perspective on understanding and solving problems.
+                </p>
+
+                <p>
+                    I'm particularly interested in technical and data-driven work where I can connect scientific understanding with practical problem-solving. I enjoy working with complex information, validating results, and turning data into meaningful insights.
+                </p>
+
+                <!-- EDUCATION & LANGUAGES -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-6 border-t border-subtleline">
+
+                    <!-- Education -->
+                    <div class="p-4 bg-burgundycard border border-subtleline">
+
+                        <span class="font-mono text-xs text-mutegray uppercase tracking-widest block mb-2">
+                            🎓 Education
+                        </span>
+
+                        <p class="text-lightgray font-semibold text-sm">
+                            B.Sc. in Physics (S.Si.)
+                        </p>
+
+                        <p class="text-mutegray font-sans text-sm">
+                            Universitas Pendidikan Indonesia
+                        </p>
+
+                    </div>
+
+                    <!-- Languages -->
+                    <div class="p-4 bg-burgundycard border border-subtleline">
+
+                        <span class="font-mono text-xs text-mutegray uppercase tracking-widest block mb-2">
+                            🗣️ Languages
+                        </span>
+
+                        <div class="font-sans text-sm space-y-1">
+
+                            <p class="text-lightgray">
+                                <span class="font-semibold">Bahasa Indonesia</span>
+                                <span class="text-mutegray">(Native)</span>
+                            </p>
+
+                            <p class="text-lightgray">
+                                <span class="font-semibold">English</span>
+                                <span class="text-mutegray">(Intermediate)</span>
+                            </p>
+
+                            <p class="text-lightgray">
+                                <span class="font-semibold">Mandarin</span>
+                                <span class="text-mutegray">(Basic)</span>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 4. EXPERIENCE & RESEARCH SECTION -->
+    <section id="experience" class="my-20 border-b border-subtleline pb-16 scroll-mt-28">
+        <div class="mb-10">
+            <p class="font-mono text-xs uppercase tracking-widest text-mutegray mb-1">02 / Experience</p>
+            <h2 class="font-serif text-3xl font-bold text-lightgray mb-2">Work & Research</h2>
+            <p class="text-sm text-mutegray">Track record across national research institutions, technical field engineering, and laboratories.</p>
+        </div>
+
+        <div class="space-y-6">
+            
+            <!-- KOTAK 1: RESEARCH & ACADEMIC (BRIN & Lab Assistant dalam 1 Kotak) -->
+            <div class="bg-burgundybg border border-subtleline p-6 hover:border-lightgray transition">
+                <span class="font-mono text-xs text-mutegray uppercase block mb-5">RESEARCH & ACADEMIC TRACK RECORD</span>
+                
+                <div class="space-y-8">
+                    <!-- Kegiatan 1: BRIN -->
+                    <div>
+                        <div class="flex items-baseline justify-between gap-4 mb-2">
+                            <h3 class="font-serif text-lg font-bold text-lightgray">Laboratory and Computational Battery Materials Assistant Research — BRIN RI</h3>
+                            <span class="font-mono text-xs text-mutegray whitespace-nowrap text-right">Feb 2025 - Jul 2026</span>
+                        </div>
+                        <p class="text-xs text-mutegray font-light leading-relaxed mb-4">
+                            Employed Quantum ESPRESSO and Python on the Mahameru HPC cluster via SSH to simulate electronic structures and lithium-ion battery transport mechanics.
+                        </p>
+                        <!-- 3 Foto Dokumentasi BRIN -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div class="group relative overflow-hidden bg-burgundycard border border-subtleline h-56">
+                                <img src="image\hpc.png" alt="Mahameru HPC" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                                <div class="absolute bottom-0 inset-x-0 p-2 bg-[#0d090a]/80 text-[10px] font-mono text-lightgray">✦ HPC Cluster Simulation</div>
+                            </div>
+                            <div class="group relative overflow-hidden bg-burgundycard border border-subtleline h-56">
+                                <img src="image\cddpcl.png" alt="DFT Simulation" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                                <div class="absolute bottom-0 inset-x-0 p-2 bg-[#0d090a]/80 text-[10px] font-mono text-lightgray">✦ DFT Electronic Structure</div>
+                            </div>
+                            <div class="group relative overflow-hidden bg-burgundycard border border-subtleline h-56">
+                                <img src="image\python.png" alt="Python Analytics" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                                <div class="absolute bottom-0 inset-x-0 p-2 bg-[#0d090a]/80 text-[10px] font-mono text-lightgray">✦ Python Data Analytics</div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div class="group relative overflow-hidden bg-burgundycard border border-subtleline h-56">
+                                <img src="image\modellingAtom.png" alt="Mahameru HPC" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                                <div class="absolute bottom-0 inset-x-0 p-2 bg-[#0d090a]/80 text-[10px] font-mono text-lightgray">✦ Modeling Sample</div>
+                            </div>
+                            <div class="group relative overflow-hidden bg-burgundycard border border-subtleline h-56">
+                                <img src="image\SlurryMembrane.jpg" alt="DFT Simulation" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                                <div class="absolute bottom-0 inset-x-0 p-2 bg-[#0d090a]/80 text-[10px] font-mono text-lightgray">✦ Slurry Membrane Processing</div>
+                            </div>
+                            <div class="group relative overflow-hidden bg-burgundycard border border-subtleline h-56">
+                                <img src="image\AssembleBattery.jpg" alt="Python Analytics" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                                <div class="absolute bottom-0 inset-x-0 p-2 bg-[#0d090a]/80 text-[10px] font-mono text-lightgray">✦ Assembly Battery</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Garis Pemisah Antar Kegiatan di Dalam Kotak Yang Sama -->
+                    <div class="border-t border-subtleline pt-1"></div>
+
+                    <!-- Kegiatan 2: Physics Laboratory Assistant -->
+                    <div>
+                        <div class="flex items-baseline justify-between gap-4 mb-2">
+                            <h3 class="font-serif text-lg font-bold text-lightgray">Physics Laboratory Assistant — Universitas Pendidikan Indonesia</h3>
+                            <span class="font-mono text-xs text-mutegray whitespace-nowrap text-right">2025 - 2026</span>
+                        </div>
+                        <p class="text-xs text-mutegray font-light leading-relaxed mb-4">
+                            Managed experimental preparation, equipment calibration, and technical troubleshooting for physics laboratory cohorts, guiding students through practical instrumentation modules.
+                        </p>
+                        <!-- 3 Foto Dokumentasi Lab Assistant -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div class="group relative overflow-hidden bg-burgundycard border border-subtleline h-56">
+                                <img src="image\LFD.jpg" alt="Lab Calibration" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                                <div class="absolute bottom-0 inset-x-0 p-2 bg-[#0d090a]/80 text-[10px] font-mono text-lightgray">✦ Basic Physic experiment</div>
+                            </div>
+                            <div class="group relative overflow-hidden bg-burgundycard border border-subtleline h-56">
+                                <img src="image\LMGO.jpg" alt="Instrumentation" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                                <div class="absolute bottom-0 inset-x-0 p-2 bg-[#0d090a]/80 text-[10px] font-mono text-lightgray">✦ Instrumentation Setup</div>
+                            </div>
+                            <div class="group relative overflow-hidden bg-burgundycard border border-subtleline h-56">
+                                <img src="image\puspaiptek.jpeg" alt="Instrumentation" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                                <div class="absolute bottom-0 inset-x-0 p-2 bg-[#0d090a]/80 text-[10px] font-mono text-lightgray">✦ Assistance with Puspaiptek Visits </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- KOTAK 2: WORK EXPERIENCE (Protech Engineering) -->
+            <div class="bg-burgundybg border border-subtleline p-6 hover:border-lightgray transition">
+                <span class="font-mono text-xs text-mutegray uppercase block mb-4">FIELD ENGINEERING EXPERIENCE</span>
+                
+                <div class="flex items-baseline justify-between gap-4 mb-2">
+                    <h3 class="font-serif text-lg font-bold text-lightgray">Field & Quality Control Engineer — Protech Engineering</h3>
+                    <span class="font-mono text-xs text-mutegray whitespace-nowrap text-right">Feb 2026 - Mar 2026</span>
+                </div>
+                
+                <p class="text-xs text-mutegray font-light leading-relaxed mb-4">
+                    Executed surveying, topological mapping, and data quality control across 280 measurement stations using SmartSolo seismometers for Ambient Noise Tomography (ANT).
+                </p>
+
+                <!-- 3 Foto Dokumentasi Protech -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div class="group relative overflow-hidden bg-burgundycard border border-subtleline h-56">
+                        <img src="image\TeamPhoto.jpg" alt="Surveying" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                        <div class="absolute bottom-0 inset-x-0 p-2 bg-[#0d090a]/80 text-[10px] font-mono text-lightgray">✦ Team Survey</div>
+                    </div>
+                    <div class="group relative overflow-hidden bg-burgundycard border border-subtleline h-56">
+                        <img src="image\sertifprotech.jpg" alt="SmartSolo" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                        <div class="absolute bottom-0 inset-x-0 p-2 bg-[#0d090a]/80 text-[10px] font-mono text-lightgray">✦ avenza </div>
+                    </div>
+                    <div class="group relative overflow-hidden bg-burgundycard border border-subtleline h-56">
+                        <img src="image\Mapping location.jpg" alt="Topo QC" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                        <div class="absolute bottom-0 inset-x-0 p-2 bg-[#0d090a]/80 text-[10px] font-mono text-lightgray">✦ Mapping Location Survey </div>
+                    </div>
+                </div>
+            </div>
+            <!-- KOTAK ORGANIZATION: Header di Atas + 2 Kolom Menyatu di Bawah -->
+            <div class="bg-burgundybg border border-subtleline hover:border-lightgray transition">
+                
+                <!-- BARIS ATAS: Header ORGANIZATION Full-Width -->
+                <div class="px-6 py-4 md:px-8 border-b border-subtleline">
+                    <span class="font-mono text-xs text-mutegray uppercase tracking-wider block">ORGANIZATION</span>
+                </div>
+
+                <!-- BARIS BAWAH: Grid 2 Kolom dengan Garis Pemisah Vertikal Full -->
+                <div class="grid grid-cols-1 md:grid-cols-2 md:divide-x divide-subtleline">
+                    
+                    <!-- KOLOM KIRI -->
+                    <div class="p-6 md:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-baseline justify-between gap-2 mb-2">
+                                <h3 class="font-serif text-lg font-bold text-lightgray">Dewan Perwakilan Mahasiswa Himpunan Mahasiswa Fisika FPMIPA UPI</h3>
+                                <span class="font-mono text-xs text-mutegray whitespace-nowrap">Feb 2023 - Jan 2024</span>
+                            </div>
+                            
+                            <p class="text-xs text-mutegray font-light leading-relaxed mb-6">
+                                Presidium of Student Assembly, HMF FPMIPA UPI 2023-Led student assembly meetings, coordinating agendas and key organizational decisions.
+                                Managed household affairs such as archiving, correspondence, finance, social media, and ensuring smooth daily operations
+                            </p>
+                            
+                            <!-- Tombol Link Menuju Instagram -->
+                            <a href="https://www.instagram.com/p/C4FcWACyoEB/?utm_source=ig_web_copy_link&psln=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==" target="_blank" class="inline-flex items-center gap-2 font-mono text-xs text-lightgray border border-subtleline px-4 py-2 hover:bg-lightgray hover:text-[#0d090a] transition">
+                                <span>✦ View on Instagram</span>
+                                <span>→</span>
+                            </a>
+                            
+                        </div>
+
+                        <!-- 2 FOTO DOKUMENTASI  -->
+                        <div class="grid grid-cols-2 gap-3 mt-auto">
+                            <!-- Foto Kiri 1-->
+                            <div class="group relative overflow-hidden bg-burgundycard border border-subtleline h-64">
+                                <img src="image\dpm.jpeg" alt="Activity 2A" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                                <div class="absolute bottom-0 inset-x-0 p-1.5 bg-[#0d090a]/80 text-[9px] font-mono text-lightgray truncate">✦ DPM 2023</div>
+                            </div>
+                            <!-- Foto Kanan 1-->
+                            <div class="group relative overflow-hidden bg-burgundycard border border-subtleline h-64">
+                                <img src="image\iht.jpeg" alt="Activity 2B" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                                <div class="absolute bottom-0 inset-x-0 p-1.5 bg-[#0d090a]/80 text-[9px] font-mono text-lightgray truncate">✦ In House Training DPM 2023 </div>
+                            </div>
+                            <!-- Foto Kiri 2-->
+                            <div class="group relative overflow-hidden bg-burgundycard border border-subtleline h-64">
+                                <img src="image\burt.jpeg" alt="Activity 2A" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                                <div class="absolute bottom-0 inset-x-0 p-1.5 bg-[#0d090a]/80 text-[9px] font-mono text-lightgray truncate">✦ BURT Activity </div>
+                            </div>
+                            <!-- Foto Kanan 2-->
+                            <div class="group relative overflow-hidden bg-burgundycard border border-subtleline h-64">
+                                <img src="image\presidium.jpeg" alt="Activity 2B" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                                <div class="absolute bottom-0 inset-x-0 p-1.5 bg-[#0d090a]/80 text-[9px] font-mono text-lightgray truncate">✦ Presidium MUMAS 2023 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- KOLOM KANAN -->
+                    <div class="p-6 md:p-8 flex flex-col justify-between border-t md:border-t-0 border-subtleline">
+                        <div>
+                            <div class="flex items-baseline justify-between gap-2 mb-2">
+                                <h3 class="font-serif text-lg font-bold text-lightgray">Komunitas Mahasiswa Pengemar Otomasi dan Robotika UPI</h3>
+                                <span class="font-mono text-xs text-mutegray whitespace-nowrap">Nov 2023 - Jan 2024</span>
+                            </div>
+                            
+                            <p class="text-xs text-mutegray font-light leading-relaxed mb-6">
+                                Served as the Head of Megaproject Generation XVI and Represented the university as a KRTMI team member at the Indonesian Robot Contest (KRI) 2023 in Semarang, applying practical automation and robotics skills.
+                            </p>
+
+                            <!-- Tombol Link Menuju Instagram -->
+                            <a href="https://www.instagram.com/p/CtAEahZhzjv/?utm_source=ig_web_copy_link&cplk=NTc4MTIwNjQ2YQ==" target="_blank" class="inline-flex items-center gap-2 font-mono text-xs text-lightgray border border-subtleline px-4 py-2 hover:bg-lightgray hover:text-[#0d090a] transition">
+                                <span>✦ View on Instagram</span>
+                                <span>→</span>
+                            </a>
+                            
+                        </div>
+
+                       <!-- 2 FOTO DOKUMENTASI  -->
+                        <div class="grid grid-cols-2 gap-3 mt-auto">
+                            <!-- Foto Kiri 1-->
+                            <div class="group relative overflow-hidden bg-burgundycard border border-subtleline h-64">
+                                <img src="image\isotron team.jpeg" alt="Activity 2A" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                                <div class="absolute bottom-0 inset-x-0 p-1.5 bg-[#0d090a]/80 text-[9px] font-mono text-lightgray truncate">✦ Isotron Team KRI 2023 </div>
+                            </div>
+                            <!-- Foto Kanan 1-->
+                            <div class="group relative overflow-hidden bg-burgundycard border border-subtleline h-64">
+                                <img src="image\media.jpg" alt="Activity 2B" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                                <div class="absolute bottom-0 inset-x-0 p-1.5 bg-[#0d090a]/80 text-[9px] font-mono text-lightgray truncate">✦ Part of Team KOMPOR UPI KRI 2023 </div>
+                            </div>
+                             <!-- Foto Kiri 2-->
+                            <div class="group relative overflow-hidden bg-burgundycard border border-subtleline h-64">
+                                <img src="image\Megaproyek.jpeg" alt="Activity 2A" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                                <div class="absolute bottom-0 inset-x-0 p-1.5 bg-[#0d090a]/80 text-[9px] font-mono text-lightgray truncate">✦ Megaproyek 16</div>
+                            </div>
+                            <!-- Foto Kanan 2-->
+                            <div class="group relative overflow-hidden bg-burgundycard border border-subtleline h-64">
+                                <img src="image\stm32.jpg" alt="Activity 2B" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                                <div class="absolute bottom-0 inset-x-0 p-1.5 bg-[#0d090a]/80 text-[9px] font-mono text-lightgray truncate">✦ Exploration STM32 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- BARIS KEDUA: Grid 2 Kolom Baru (Copy-Paste Bagian Ini) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 md:divide-x divide-subtleline border-t border-subtleline">
+                    
+                    <!-- KOLOM KIRI (Kegiatan 3) -->
+                    <div class="p-6 md:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-baseline justify-between gap-2 mb-2">
+                                <h3 class="font-serif text-lg font-bold text-lightgray">Tutorial Pendidikan Agama Islam -Seminar Pendidikan Agama Islam</h3>
+                                <span class="font-mono text-xs text-mutegray whitespace-nowrap">Jan 2023 - Jan 2024</span>
+                            </div>
+                            
+                            <p class="text-xs text-mutegray font-light leading-relaxed mb-6">
+                                General Secretary for the Islamic Tutorial Program at Universitas Pendidikan Indonesia for freshmen and fourth-semester students. Managed meeting agendas, minutes, and program coordination.
+                            </p>
+
+                             <!-- Tombol Link Menuju Instagram -->
+                            <a href="https://www.instagram.com/p/CyYOoqvPLB1/?utm_source=ig_web_copy_link&vrfl=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==" target="_blank" class="inline-flex items-center gap-2 font-mono text-xs text-lightgray border border-subtleline px-4 py-2 hover:bg-lightgray hover:text-[#0d090a] transition">
+                                <span>✦ View on Instagram</span>
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                        <!-- 1 Foto Dokumentasi -->
+                        <div class="group relative overflow-hidden bg-burgundycard border border-subtleline h-72 mt-auto">
+                            <img src="image\tutorial.jpg" alt="Activity 3" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                            <div class="absolute bottom-0 inset-x-0 p-2 bg-[#0d090a]/80 text-[10px] font-mono text-lightgray">Akhwat Kepengurusan 2023</div>
+                        </div>
+                    </div>
+
+                    <!-- KOLOM KANAN (Kegiatan 4) -->
+                    <div class="p-6 md:p-8 flex flex-col justify-between border-t md:border-t-0 border-subtleline">
+                        <div>
+                            <div class="flex items-baseline justify-between gap-2 mb-2">
+                                <h3 class="font-serif text-lg font-bold text-lightgray">
+                                Kepengurusan Asrama Mahasiswa UPI Bumi Siliwangi</h3>
+                                <span class="font-mono text-xs text-mutegray whitespace-nowrap">Oct 2022 - Dec 2023</span>
+                            </div>
+                            
+                            <p class="text-xs text-mutegray font-light leading-relaxed mb-6">
+                                Designed and executed research initiatives to evaluate resident needs, analyzed data to propose data-driven programs, and collaborated across divisions for effective integration.
+                            </p>
+
+                              <!-- Tombol Link Menuju Instagram -->
+                            <a href="https://www.instagram.com/p/Cy8pOfrPfXX/?utm_source=ig_web_copy_link&cplk=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==" target="_blank" class="inline-flex items-center gap-2 font-mono text-xs text-lightgray border border-subtleline px-4 py-2 hover:bg-lightgray hover:text-[#0d090a] transition">
+                                <span>✦ View on Instagram</span>
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                        <!-- 2 FOTO DOKUMENTASI  -->
+                        <div class="grid grid-cols-2 gap-3 mt-auto">
+                            <!-- Foto Kiri -->
+                            <div class="group relative overflow-hidden bg-burgundycard border border-subtleline h-72">
+                                <img src="image\asrama.jpg" alt="Activity 2A" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                                <div class="absolute bottom-0 inset-x-0 p-1.5 bg-[#0d090a]/80 text-[9px] font-mono text-lightgray truncate">✦ Panitia Tahun Baru 2022 </div>
+                            </div>
+                            <!-- Foto Kanan -->
+                            <div class="group relative overflow-hidden bg-burgundycard border border-subtleline h-72">
+                                <img src="image\taunbaru.jpg" alt="Activity 2B" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                                <div class="absolute bottom-0 inset-x-0 p-1.5 bg-[#0d090a]/80 text-[9px] font-mono text-lightgray truncate">✦ Kegiatan Tahun Baru 2022 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. EXPERTISE & SKILLS (What I Do + Toolkit) -->
+    <section id="expertise" class="my-20 grid grid-cols-1 lg:grid-cols-12 border border-subtleline bg-burgundybg scroll-mt-28">
+        <!-- WHAT I DO -->
+        <div class="lg:col-span-6 p-8 border-b lg:border-b-0 lg:border-r border-subtleline">
+            <p class="font-mono text-xs uppercase tracking-widest text-mutegray mb-1">03 / EXPERTISE</p>
+            <h2 class="font-serif text-2xl font-bold text-lightgray mb-8">WHAT I DO ✦</h2>
+            <div class="space-y-6 font-mono text-xs">
+                <div class="border-b border-subtleline pb-4">
+                    <span class="text-lightgray font-bold mr-3">01</span>
+                    <span class="text-lightgray uppercase">R&D (MATERIAL SYNTHESIS & COMPUTATIONAL MODELING) </span>
+                    <p class="text-mutegray mt-1 font-sans font-light">Applying scientific methods, material synthesis, and computational modeling simulations.</p>
+                </div>
+                <div class="border-b border-subtleline pb-4">
+                    <span class="text-lightgray font-bold mr-3">02</span>
+                    <span class="text-lightgray uppercase">DATA ANALYSIS (CLEANING & BI DASHBOARDS REPORTING)</span>
+                    <p class="text-mutegray mt-1 font-sans font-light">Transforming raw datasets into reliable data structures with Python and SQL. Building executive dashboards in Power BI and automated Excel reporting systems.</p>
+                </div>
+                <div>
+                    <span class="text-lightgray font-bold mr-3">03</span>
+                    <span class="text-lightgray uppercase">SOFTWARE & EMBEDDED SYSTEMS</span>
+                    <p class="text-mutegray mt-1 font-sans font-light">Developing microcontroller-based control systems (C++/Arduino), automating data workflows with Python, and building responsive web interfaces.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOOLKIT & STACK -->
+        <div class="lg:col-span-6 p-8">
+            <p class="font-mono text-xs uppercase tracking-widest text-mutegray mb-1">03 / TOOLKIT</p>
+            <h2 class="font-serif text-2xl font-bold text-lightgray mb-8">TOOLS & TECH STACK ✦</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 font-mono text-xs">
+                
+                <!-- 1. PYTHON -->
+                <div class="p-4 bg-burgundycard border border-subtleline text-lightgray flex items-center gap-3 hover:border-lightgray transition group">
+                    <svg class="w-4 h-4 text-mutegray group-hover:text-lightgray transition shrink-0 stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                    </svg>
+                    <span>PYTHON (NUMPY, MATPLOTLIB, PANDAS)</span>
+                </div>
+
+                <!-- 2. POSTGRESQL / SQL -->
+                <div class="p-4 bg-burgundycard border border-subtleline text-lightgray flex items-center gap-3 hover:border-lightgray transition group">
+                    <svg class="w-4 h-4 text-mutegray group-hover:text-lightgray transition shrink-0 stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/>
+                    </svg>
+                    <span>POSTGRESQL / SQL</span>
+                </div>
+
+                <!-- 3. GIT, GITHUB & LINUX -->
+                <div class="p-4 bg-burgundycard border border-subtleline text-lightgray flex items-center gap-3 hover:border-lightgray transition group">
+                    <svg class="w-4 h-4 text-mutegray group-hover:text-lightgray transition shrink-0 stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/>
+                    </svg>
+                    <span>GIT, GITHUB & LINUX (SSH)</span>
+                </div>
+
+                <!-- 4. MS EXCEL / SHEETS -->
+                <div class="p-4 bg-burgundycard border border-subtleline text-lightgray flex items-center gap-3 hover:border-lightgray transition group">
+                    <svg class="w-4 h-4 text-mutegray group-hover:text-lightgray transition shrink-0 stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 9v12"/>
+                    </svg>
+                    <span>MS EXCEL / SHEETS</span>
+                </div>
+
+                <!-- 5. C++ & ARDUINO -->
+                <div class="p-4 bg-burgundycard border border-subtleline text-lightgray flex items-center gap-3 hover:border-lightgray transition group">
+                    <svg class="w-4 h-4 text-mutegray group-hover:text-lightgray transition shrink-0 stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/>
+                    </svg>
+                    <span>C++ & ARDUINO</span>
+                </div>
+
+                <!-- 6. POWER BI -->
+                <div class="p-4 bg-burgundycard border border-subtleline text-lightgray flex items-center gap-3 hover:border-lightgray transition group">
+                    <svg class="w-4 h-4 text-mutegray group-hover:text-lightgray transition shrink-0 stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/>
+                    </svg>
+                    <span>POWER BI</span>
+                </div>
+
+                <!-- 7. HTML & TAILWIND CSS -->
+                <div class="p-4 bg-burgundycard border border-subtleline text-lightgray flex items-center gap-3 hover:border-lightgray transition group">
+                    <svg class="w-4 h-4 text-mutegray group-hover:text-lightgray transition shrink-0 stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/>
+                    </svg>
+                    <span>HTML & TAILWIND CSS</span>
+                </div>
+
+                <!-- 8. DESIGN & SIMULATION -->
+                <div class="p-4 bg-burgundycard border border-subtleline text-lightgray flex items-center gap-3 hover:border-lightgray transition group">
+                    <svg class="w-4 h-4 text-mutegray group-hover:text-lightgray transition shrink-0 stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/>
+                    </svg>
+                    <span>DESIGN & SIMULATION (BLENDER, PROTEUS, CANVA)</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. FEATURED PROJECTS (Data Analytics & R&D Campus Projects) -->
+    <section id="projects" class="my-20 scroll-mt-28">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="font-mono text-xs uppercase tracking-widest text-lightgray">04 / FEATURED PROJECTS ✦</h2>
+            <a href="#contact" class="font-mono text-xs uppercase tracking-widest text-mutegray hover:text-lightgray transition">CONTACT FOR FULL PORTFOLIO ⟶</a>
+        </div>
+
+        <!-- Grid Frame Projects -->
+        <div class="grid grid-cols-1 md:grid-cols-2 border border-subtleline bg-burgundybg">
+            <!-- Project 1: Data Analytics -->
+            <div class="p-8 border-b md:border-b-0 md:border-r border-subtleline flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center font-mono text-xs text-mutegray mb-4">
+                        <span>01 / BUSINESS INTELLIGENCE</span>
+                        <span>DATA ANALYTICS</span>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-lightgray mb-3">EV Battery Charging Analytics</h3>
+                    <p class="text-sm text-mutegray font-light mb-4 leading-relaxed">
+                        Explore how charging duration, state of charge (SOC), charging mode, battery type, and EV model relate to charging efficiency and degradation rate in the selected dataset.
+                    </p>
+                    <!-- Tombol Link Menuju Github -->
+                    <a href="ev-battery-charging-analytics" target="_blank" class="inline-flex items-center gap-2 font-mono text-xs text-lightgray border border-subtleline px-4 py-2 hover:bg-lightgray hover:text-[#0d090a] transition">
+                                <span>✦ View on Github</span>
+                                <span>→</span>
+                     </a>
+                    <!-- Dokumentasi Gambar Project 1: Data Analytics -->
+                    <div class="group relative overflow-hidden bg-burgundycard border border-subtleline h-72 ">
+                        <img src="image\dashboard.png" alt="Topo QC" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                        <div class="absolute bottom-0 inset-x-0 p-2 bg-[#0d090a]/80 text-[10px] font-mono text-lightgray">✦ Dashbooard </div>
+                    </div>
+                </div>
+                <div class="flex gap-2 font-mono text-[10px] uppercase">
+                    <span class="px-3 py-1.5 bg-burgundycard border border-subtleline text-lightgray">SQL</span>
+                    <span class="px-3 py-1.5 bg-burgundycard border border-subtleline text-lightgray">POWER BI</span>
+                    <span class="px-3 py-1.5 bg-burgundycard border border-subtleline text-lightgray">EXCEL</span>
+                </div>
+            </div>
+
+            <!-- Project 2: R&D Campus / Hardware / Simulation -->
+            <div class="p-8 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center font-mono text-xs text-mutegray mb-3">
+                        <span>02 / HARDWARE & SIMULATION</span>
+                        <span>R&D / PHYSICS</span>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-lightgray mb-3">Hybrid Food Dehydrator</h3>
+                    <p class="text-sm text-mutegray font-light mb-4 leading-relaxed">
+                        Developed a hybrid food dehydrator focused on precise thermal regulation. The project involved hardware instrumentation, integrating PTC heaters with an Arduino Uno and Solid State Relays (SSR) driven by custom PID control algorithms.
+                    </p>
+                      <!-- Dokumentasi Gambar Project 1: Data Analytics -->
+                    <div class="group relative overflow-hidden bg-burgundycard border border-subtleline h-72 mt-8 mb-1">
+                        <img src="image\fd.jpg" alt="Topo QC" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                        <div class="absolute bottom-0 inset-x-0 p-2 bg-[#0d090a]/80 text-[10px] font-mono text-lightgray">✦ Blender 3D design </div>
+                    </div>
+                </div>
+                <div class="flex gap-2 font-mono text-[10px] uppercase">
+                    <span class="px-3 py-1.5 bg-burgundycard border border-subtleline text-lightgray">ARDUINO</span>
+                    <span class="px-3 py-1.5 bg-burgundycard border border-subtleline text-lightgray">PYTHON</span>
+                    <span class="px-3 py-1.5 bg-burgundycard border border-subtleline text-lightgray">PROTHEUS</span>
+                    <span class="px-3 py-1.5 bg-burgundycard border border-subtleline text-lightgray">BLENDER</span>
+                    <span class="px-3 py-1.5 bg-burgundycard border border-subtleline text-lightgray">WIRING</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. LICENSES & CERTIFICATES (SECTION KHUSUS GAMBAR SERTIFIKAT) -->
+    <section id="certificates" class="my-20 border-b border-subtleline pb-16 scroll-mt-28">
+        <div class="mb-10">
+            <p class="font-mono text-xs uppercase tracking-widest text-mutegray mb-1">05 / Licenses & Certificates</p>
+            <h2 class="font-serif text-3xl font-bold text-lightgray mb-2">Verified Credentials</h2>
+            <p class="text-sm text-mutegray">Official professional certifications and academic badges.</p>
+        </div>
+
+        <!-- Grid Cards Sertifikat -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Card Sertifikat 1 -->
+            <div class="bg-burgundybg border border-subtleline p-4 hover:border-lightgray transition flex flex-col justify-between">
+                <div>
+                    <div class="w-full h-52 bg-burgundycard border border-subtleline mb-4 overflow-hidden group">
+                        <!-- Ganti src dengan file gambar sertifikat kamu -->
+                        <img src="certificate\python.jpg" alt="Python & SQL Certification" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                    </div>
+                    <span class="font-mono text-[10px] text-mutegray uppercase block mb-1">ISSUED 2026</span>
+                    <h3 class="font-serif text-base font-bold text-lightgray mb-1">Python for Business</h3>
+                    <p class="text-xs text-mutegray font-light">Thematic Academy
+                    Digital Talent Scholarship 2024
+                    </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-subtleline flex justify-between items-center font-mono text-xs">
+                    <span class="text-mutegray">VERIFIED</span>
+                    <span class="text-lightgray">↗</span>
+                </div>
+            </div>
+
+            <!-- Card Sertifikat 2 -->
+            <div class="bg-burgundybg border border-subtleline p-4 hover:border-lightgray transition flex flex-col justify-between">
+                <div>
+                    <div class="w-full h-52 bg-burgundycard border border-subtleline mb-4 overflow-hidden group">
+                        <!-- Ganti src dengan file gambar sertifikat kamu -->
+                        <img src="certificate\ptesol.png" alt="English Proficiency Certificate" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                    </div>
+                    <span class="font-mono text-[10px] text-mutegray uppercase block mb-1">ISSUED 2028</span>
+                    <h3 class="font-serif text-base font-bold text-lightgray mb-1">The Proficiency Test of English to Speakers of Other Languages </h3>
+                    <p class="text-xs text-mutegray font-light">Official Score: 493.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-subtleline flex justify-between items-center font-mono text-xs">
+                    <span class="text-mutegray">VERIFIED</span>
+                    <span class="text-lightgray">↗</span>
+                </div>
+            </div>
+            <!-- Card Sertifikat 3 -->
+            <!-- <div class="bg-burgundybg border border-subtleline p-4 hover:border-lightgray transition flex flex-col    justify-between">
+                <div>
+                    <div class="w-full h-44 bg-burgundycard border border-subtleline mb-4 overflow-hidden group">
+                        <img src="cert-data-analytics.jpg" alt="Data Analytics Certificate" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                    </div>
+                    <span class="font-mono text-[10px] text-mutegray uppercase block mb-1">ISSUED 2026</span>
+                    <h3 class="font-serif text-base font-bold text-lightgray mb-1">Data Analytics Professional</h3>
+                    <p class="text-xs text-mutegray font-light">SQL, Power BI, & Data Storytelling specialization credentials.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-subtleline flex justify-between items-center font-mono text-xs">
+                    <span class="text-mutegray">VERIFIED</span>
+                    <span class="text-lightgray">↗</span>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+   <!-- 8. FOOTER CONTACT -->
+    <section id="contact" class="my-20 border border-subtleline bg-burgundybg p-10 sm:p-16 scroll-mt-28">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            <div class="md:col-span-7">
+                <h2 class="font-serif text-3xl sm:text-5xl font-normal text-lightgray leading-tight">
+                    LET'S CREATE<br>SOMETHING
+                </h2>
+                <span class="font-script text-5xl sm:text-6xl text-mutegray block">Amazing</span>
+                <div class="w-full">
+                    <img src="icons\lily.png" alt="Footer Illustration" class="w-2/3 h-auto object-contain opacity-80 hover:opacity-100 transition duration-500">
+                
+              
+
+                </div>
+            </div>
+            <div class="md:col-span-5 font-mono text-s space-y-4">
+                <p class="text-mutegray uppercase tracking-widest">I'M CURRENTLY OPEN FOR NEW OPPORTUNITIES & COLLABORATIONS.</p>
+                <a href="mailto:ddinafilah@gmail.com" class="block p-4 bg-burgundycard border border-subtleline hover:border-lightgray text-lightgray transition text-center uppercase tracking-widest font-semibold">
+                    SEND ME A MESSAGE ✦
+                </a>
+                
+                <!-- DAFTAR KONTAK & SOSIAL MEDIA DENGAN IKON SVG -->
+                <div class="pt-4 border-t border-subtleline text-mutegray space-y-3">
+                    
+                    <!-- Email -->
+                    <a href="mailto:ddinafilah@gmail.com" class="flex items-center gap-3 hover:text-lightgray transition group">
+                        <svg class="w-4 h-4 stroke-current shrink-0" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                        </svg>
+                        <span>EMAIL: ddinafilah@gmail.com</span>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://instagram.com/denadinafilah" target="_blank" class="flex items-center gap-3 hover:text-lightgray transition group">
+                        <svg class="w-4 h-4 stroke-current shrink-0" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                        </svg>
+                        <span>INSTAGRAM: @denadinafilah ↗</span>
+                    </a>
+                    <!-- LinkedIn (BARU DITAMBAHKAN) -->
+                    <a href="https://www.linkedin.com/in/denasitidinafilah" target="_blank" class="flex items-center gap-3 hover:text-lightgray transition group">
+                        <svg class="w-4 h-4 stroke-current shrink-0" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>
+                        </svg>
+                        <span>LINKEDIN: Dena Siti Dinafilah ↗</span>
+                    </a>
+                    <!-- GitHub -->
+                    <a href="https://github.com/denadinafilah" target="_blank" class="flex items-center gap-3 hover:text-lightgray transition group">
+                        <svg class="w-4 h-4 stroke-current shrink-0" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/>
+                        </svg>
+                        <span>GITHUB: @denadinafilah ↗</span>
+                    </a>
+
+                    <!-- Location -->
+                    <div class="flex items-center gap-3">
+                        <svg class="w-4 h-4 stroke-current shrink-0" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <span>LOCATION: BOGOR, INDONESIA</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER BAR -->
+    <footer class="flex justify-between items-center border-t border-subtleline pt-6 text-[11px] font-mono text-mutegray">
+        <span>THANK YOU FOR VISITING ✦</span>
+        <span>© 2026 DENA SITI DINAFILAH</span>
+        <a href="#top" class="text-lightgray hover:underline">TOP ↑</a>
+    </footer>
+
+    </main>
+</body>
+</html>
